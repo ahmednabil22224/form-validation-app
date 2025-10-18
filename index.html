@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple example of a responsive Login page." />
+    <title>Form Validation</title>
+	<link rel="icon" href="./images/logo.webp">
+    <!--  Main Template Css File -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div id="login" class="login">
+        <h1>Log in to App</h1>
+        <form class="login-form" action="">
+          <input
+            id="login-user"
+            type="text"
+            autocomplete="off"
+            placeholder="Mobile number or Email Address" />
+          <input
+            id="login-password"
+            type="password"
+            placeholder="Password"
+            value=""
+            autocomplete="new-password"
+            title="Password must be at least 8 letters contain small, capital letter, digits and one of [!@#$&]" />
+          <button type="submit" aria-label="Submit Login" tabindex="0">
+            Log in
+          </button>
+        </form>
+        <p>
+          <a href="#">Forgotten account?</a>
+        </p>
+        <div class="seprator">or</div>
+        <button class="new-account">Create new account</button>
+      </div>
+
+      <div id="register" class="register">
+        <h1>Create a new account</h1>
+        <p>It's quick and easy.</p>
+        <hr />
+        <form class="register-form" action="">
+          <div class="name">
+            <div class="firstname">
+              <input
+                id="firstname"
+                type="text"
+                placeholder="First name"
+                value="" />
+            </div>
+            <div class="lastname">
+              <input
+                id="lastname"
+                type="text"
+                placeholder="Last name"
+                value="" />
+            </div>
+          </div>
+          <div class="birth">
+            <p>Date of birth?</p>
+            <div class="options" id="options">
+              <select name="day" id="day" aria-label="Day">
+                <option value=""></option>
+              </select>
+              <select name="month" id="month" aria-label="Month">
+                <option value=""></option>
+              </select>
+              <select name="year" id="year" aria-label="Year">
+                <option value=""></option>
+              </select>
+            </div>
+          </div>
+          <div class="gender">
+            <p>Gender?</p>
+            <div class="options">
+              <label>
+                <input type="radio" name="gender" value="male" id="male" />
+                Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" id="female" />
+                Female
+              </label>
+            </div>
+          </div>
+          <div class="username">
+            <input
+              id="username"
+              type="text"
+              placeholder="Mobile number or Email Address"
+              value="" 
+              autocomplete="off"
+              />
+          </div>
+          <div class="register-password">
+            <input
+              id="register-password"
+              type="password"
+              placeholder="Password"
+              value=""
+              autocomplete="new-password"
+              title="Password must be at least 8 letters contain small, capital letter, digits and one of [!@#$&]" />
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <a class="login-account" href="#login">Already have an account?</a>
+      </div>
+
+      <div id="welcome">
+        <h1>welcome to My app</h1>
+        <p>New have a new Account!</p>
+        <p>Go to login page and login!</p>
+        <a href="#login">Login Page</a>
+      </div>
+      <div id="hello">
+        <h1>Hello World!</h1>
+        <p>This is the first page in the app</p>
+        <button id="logout">Logout</button>
+      </div>
+    </div>
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+input {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #c3c3c3;
+  width: 100%;
+}
+.required {
+  border-color: red;
+}
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  background-color: #eee;
+}
+button {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: rgb(17, 101, 17);
+  color: #fff;
+  border: none;
+}
+a {
+  color: rgb(9, 101, 231);
+  font-size: 20px;
+  background-color: transparent;
+  text-decoration: none;
+}
+/* ---------------------------------------------- */
+.app {
+  position: relative;
+  height: 100vh;
+}
+.app .login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.app h1 {
+  margin-bottom: 25px;
+}
+.app .login form input {
+  margin-bottom: 20px;
+}
+.app .login form button[type="submit"] {
+  background-color: rgb(35, 123, 247);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+.app .login p {
+  margin: 15px 0;
+  font-size: 20px;
+}
+.app .login .seprator {
+  position: relative;
+  margin: 15px 0;
+  color: #737373;
+}
+.app .seprator::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #737373;
+  top: 50%;
+  right: -10px;
+}
+.app .seprator::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #737373;
+  top: 50%;
+  left: -10px;
+}
+/* --------------------Register------------------------------- */
+.app .register {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 550px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.1);
+}
+.app .register p {
+  font-size: 22px;
+  color: #737373;
+}
+.app .register hr {
+  position: relative;
+  margin: 15px 0;
+  width: 108%;
+  right: 4%;
+}
+.app .register .name {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+@media (max-width: 560px) {
+  .app .register {
+    max-width: 450px;
+    border-radius: 0;
+  }
+  .app .register h1 {
+    margin-bottom: 15px;
+  }
+  .app .register .name {
+    flex-direction: column;
+  }
+  .app .register input,
+  .app .register label {
+    padding: 12px;
+  }
+}
+.app .register .name div {
+  width: 100%;
+}
+.app .register .birth,
+.app .register .gender {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.app .register .options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.app .register .birth .options select {
+  width: calc(100% / 3);
+  padding: 15px;
+  border-radius: 8px;
+}
+select {
+  border: 1px solid #c3c3c3;
+}
+.app .register .gender .options label {
+  position: relative;
+  width: calc(100% / 2);
+  padding: 15px;
+  border-radius: 8px;
+}
+label {
+  border: 1px solid #c3c3c3;
+}
+.app .register .gender .options input {
+  position: absolute;
+  width: fit-content;
+  left: calc(100% - 35px);
+  scale: 1.5;
+}
+.app .register .username,
+.app .register .register-password {
+  margin-bottom: 15px;
+}
+.app .register .login-account {
+  display: inline-block;
+  margin-top: 15px;
+}
+/* ---------------------------- */
+/* ---------------------------- */
+.name div {
+  position: relative;
+}
+.show-firstname::before,
+.show-lastname::before {
+  position: absolute;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: red;
+  top: 120%;
+  left: 10%;
+}
+.show-firstname::after,
+.show-lastname::after {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent red transparent;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+}
+@media (max-width: 560px) {
+  .show-firstname::before,
+  .show-lastname::before {
+    font-size: 14px;
+    padding: 7px;
+    left: 40%;
+  }
+  .show-firstname::before {
+    top: -100%;
+  }
+  .show-firstname::after {
+    border-color: red transparent transparent transparent;
+    top: -25%;
+  }
+}
+.show-firstname::before {
+  content: "Whats your firstname?";
+}
+.show-lastname::before {
+  content: "Whats your lastname?";
+}
+.register .options,
+.register .username,
+.register .register-password {
+  position: relative;
+}
+.register .show-options::before,
+.register .show-username::before,
+.register .show-register-password::before {
+  position: absolute;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: red;
+  width: 200px;
+  text-align: center;
+  top: 50%;
+  left: -45%;
+  transform: translate(0%, -50%);
+  z-index: 50;
+}
+.register .show-options::after,
+.register .show-username::after,
+.register .show-register-password::after {
+  position: absolute;
+  content: "";
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent red;
+  top: 50%;
+  left: -3%;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+}
+@media (max-width: 560px) {
+  .register .show-options::before,
+  .register .show-username::before,
+  .register .show-register-password::before {
+    font-size: 14px;
+    padding: 7px;
+    left: 45%;
+    top: -50%;
+    width: fit-content;
+  }
+  .register .show-options::after,
+  .register .show-username::after,
+  .register .show-register-password::after {
+    border-color: red transparent transparent transparent;
+    left: 50%;
+    top: -0%;
+  }
+}
+.register .birth .show-options::before {
+  content: "Age must be > 10 years";
+}
+.register .gender .show-options::before {
+  content: "Please choose a gender?";
+}
+.register .show-username::before {
+  content: var(--before-content);
+}
+.register .show-register-password::before {
+  content: var(--before-content);
+}
+/* -------------------------------------------- */
+/* ----------New Account Welcome Page---------- */
+#welcome {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+#welcome h1 {
+  font-size: 32px;
+  margin-top: 50px;
+  color: blue;
+}
+#welcome p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#welcome a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 8px;
+  background-color: rgb(3, 116, 35);
+  color: #fff;
+  font-weight: bold;
+}
+/* -------------------------------------------- */
+/* -----------First page after Login----------- */
+#hello {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+#hello h1 {
+  color: blue;
+  font-size: 32px;
+  margin-top: 50px;
+}
+#hello p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
