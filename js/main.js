@@ -9,21 +9,23 @@ function saveUsers(users) {
 }
 // ----------------------------------------------------------------------------
 // ---------------Convert between login or register or other pages-------------
-document.querySelector(".new-account").onclick = () => {
-  location.hash = "register";
-};
-document.querySelector(".login-account").onclick = () => {
-  location.hash = "login";
-};
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".new-account").onclick = () => {
+    location.hash = "register";
+  };
+  document.querySelector(".login-account").onclick = () => {
+    location.hash = "login";
+  };
 
-function showPageFromHash() {
-  const hash = location.hash.replace("#", "") || "login";
-  document.querySelectorAll(".app > div").forEach((div) => {
-    div.style.display = div.id === hash ? "block" : "none";
-  });
+  function showPageFromHash() {
+    const hash = location.hash.replace("#", "") || "login";
+    document.querySelectorAll(".app > div").forEach((div) => {
+      div.style.display = div.id === hash ? "block" : "none";
+    });
+  }
+  window.addEventListener("hashchange", showPageFromHash);
+  showPageFromHash();
 }
-window.addEventListener("hashchange", showPageFromHash);
-window.addEventListener("load", showPageFromHash);
 // ----------------------------------------------------------------------------
 // ---------------------Fill the Select options of birth date------------------
 const monthNames = [
