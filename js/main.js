@@ -9,7 +9,7 @@ function saveUsers(users) {
 }
 // ----------------------------------------------------------------------------
 // ---------------Convert between login or register or other pages-------------
-document.addEventListener("DOMContentLoaded", () => {
+
   document.querySelector(".new-account").onclick = () => {
     location.hash = "register";
   };
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   window.addEventListener("hashchange", showPageFromHash);
-  showPageFromHash();
-}
+  window.addEventListener("load", showPageFromHash);
+
 // ----------------------------------------------------------------------------
 // ---------------------Fill the Select options of birth date------------------
 const monthNames = [
