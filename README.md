@@ -7,7 +7,7 @@ This project includes advanced input validation, password strength indicators, a
 
 🚀 Live Demo
 
-👉 https://github.com/ahmednabil22224/form-validation-app
+👉 [https://github.com/ahmednabil22224/form-validation-app](https://ahmednabil22224.github.io/form-validation-app/)
 
 ---
 
