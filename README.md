@@ -70,7 +70,9 @@ form-validation-app/
 
 ### 📱 Mobile
 
-![Tablet Screenshot](./images/preview-login-mobile.png)
+<div align="center">
+  <img src="./images/preview-login-mobile.png" width="400" alt="Mobile Screenshot" />
+</div>
 
 ### 🖥️ Desktop
 
@@ -78,7 +80,9 @@ form-validation-app/
 
 ### 📱 Mobile
 
-## ![Tablet Screenshot](./images/preview-register-mobile.png)
+<div align="center">
+  <img src="./images/preview-register-mobile.png" width="400" alt="Mobile Screenshot" />
+</div>
 
 ## 🚀 How to Run Locally
 
